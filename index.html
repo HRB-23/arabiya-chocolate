@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>العربية للشكولاطة</title>
+  <meta name="description" content="العربية للشكولاطة — شكولاطة فاخرة مصنوعة يدوياً." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&family=Frank+Ruhl+Libre:wght@500;700&family=Heebo:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="home">
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ===== Header (same on every page) ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="العربية للشكولاطة">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="logo-text">
+          <span class="logo-name">العربية للشكولاطة</span>
+          <span class="logo-tag" data-i18n="logo.tag"></span>
+        </span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="index.html" data-i18n="nav.home" aria-current="page"></a>
+        <a href="index.html#story" data-i18n="nav.story"></a>
+        <a href="products.html" data-i18n="nav.products"></a>
+        <a href="contact.html" data-i18n="nav.contact"></a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">עברית</button>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow"></p>
+          <h1 data-i18n="hero.title"></h1>
+          <p class="lead" data-i18n="hero.lead"></p>
+          <div class="hero-ctas">
+            <a href="products.html" class="btn btn-primary" data-i18n="hero.cta1"></a>
+            <a href="#story" class="btn btn-ghost" data-i18n="hero.cta2"></a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="bonbon b1" data-depth="0.6"></div>
+          <div class="bonbon b2" data-depth="1.4"></div>
+          <div class="bonbon b3" data-depth="1.1"></div>
+          <div class="bonbon b4" data-depth="0.9"></div>
+          <div class="bonbon b5" data-depth="1.8"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Story ===== -->
+    <section class="section" id="story">
+      <div class="container story">
+        <div class="story-media">
+          <!-- Replace with: <img class="photo" src="assets/photos/founder.jpg" alt="..."> -->
+          <div class="photo photo-tall"><span data-i18n="photo.story"></span></div>
+          <div class="story-badge">
+            <strong data-i18n="story.badgeT"></strong>
+            <span data-i18n="story.badgeD"></span>
+          </div>
+        </div>
+        <div class="story-copy">
+          <p class="eyebrow" data-i18n="story.eyebrow"></p>
+          <h2 data-i18n="story.title"></h2>
+          <p data-i18n="story.p1"></p>
+          <p data-i18n="story.p2"></p>
+          <p class="signature" data-i18n="story.sign"></p>
+
+          <ol class="timeline">
+            <li><span class="t-year" data-i18n="t1.y"></span><div><strong data-i18n="t1.t"></strong><p data-i18n="t1.d"></p></div></li>
+            <li><span class="t-year" data-i18n="t2.y"></span><div><strong data-i18n="t2.t"></strong><p data-i18n="t2.d"></p></div></li>
+            <li><span class="t-year" data-i18n="t3.y"></span><div><strong data-i18n="t3.t"></strong><p data-i18n="t3.d"></p></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Gallery ===== -->
+    <section class="section section-alt" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="gallery.eyebrow"></p>
+          <h2 data-i18n="gallery.title"></h2>
+        </div>
+        <!-- Replace each .photo div with <img class="photo" src="assets/photos/..." alt="..."> -->
+        <div class="gallery">
+          <figure class="g-item g1"><div class="photo"></div><figcaption data-i18n="gallery.g1"></figcaption></figure>
+          <figure class="g-item g2"><div class="photo"></div><figcaption data-i18n="gallery.g2"></figcaption></figure>
+          <figure class="g-item g3"><div class="photo"></div><figcaption data-i18n="gallery.g3"></figcaption></figure>
+          <figure class="g-item g4"><div class="photo"></div><figcaption data-i18n="gallery.g4"></figcaption></figure>
+          <figure class="g-item g5"><div class="photo"></div><figcaption data-i18n="gallery.g5"></figcaption></figure>
+          <figure class="g-item g6"><div class="photo"></div><figcaption data-i18n="gallery.g6"></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Values ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="values.eyebrow"></p>
+          <h2 data-i18n="values.title"></h2>
+        </div>
+        <div class="values">
+          <article class="value"><span class="value-icon">١</span><h3 data-i18n="values.v1t"></h3><p data-i18n="values.v1d"></p></article>
+          <article class="value"><span class="value-icon">٢</span><h3 data-i18n="values.v2t"></h3><p data-i18n="values.v2d"></p></article>
+          <article class="value"><span class="value-icon">٣</span><h3 data-i18n="values.v3t"></h3><p data-i18n="values.v3d"></p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Featured products (teaser) ===== -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="featured.eyebrow"></p>
+          <h2 data-i18n="featured.title"></h2>
+        </div>
+        <div class="grid" id="featuredGrid"></div>
+        <div class="center"><a href="products.html" class="btn btn-primary" data-i18n="featured.cta"></a></div>
+      </div>
+    </section>
+
+    <!-- ===== CTA band ===== -->
+    <section class="section section-dark cta-band">
+      <div class="container cta-inner">
+        <h2 data-i18n="cta.title"></h2>
+        <p data-i18n="cta.lead"></p>
+        <a href="contact.html" class="btn btn-gold" data-i18n="cta.btn"></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="logo-name">العربية للشكولاطة</span>
+      <nav class="footer-nav">
+        <a href="index.html" data-i18n="nav.home"></a>
+        <a href="products.html" data-i18n="nav.products"></a>
+        <a href="contact.html" data-i18n="nav.contact"></a>
+      </nav>
+      <span>© <span class="js-year"></span> · <span data-i18n="footer.rights"></span></span>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/motion.js"></script>
+</body>
+</html>
