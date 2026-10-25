@@ -75,18 +75,24 @@
   function renderProducts(grid, list) {
     grid.innerHTML = "";
     list.forEach((p) => {
+      const href = `contact.html?product=${encodeURIComponent(p.id)}`;
       const card = document.createElement("article");
-      card.className = "card";
+      card.className = "card card-link";
       card.innerHTML = `
         <div class="card-media">${productArt(p)}</div>
         <div class="card-body">
-          <h3>${p.name[lang]}</h3>
+          <h3><a href="${href}">${p.name[lang]}</a></h3>
           <p>${p.desc[lang]}</p>
           <div class="card-foot">
             <span class="price">${formatPrice(p.price)}</span>
-            <a class="btn btn-small" href="contact.html?product=${encodeURIComponent(p.id)}">${t("product.order")}</a>
+            <a class="btn btn-small" href="${href}">${t("product.order")}</a>
           </div>
         </div>`;
+      card.addEventListener("click", (e) => {
+        if (e.target.closest("a")) return;
+        if (window.getSelection().toString()) return;
+        location.href = href;
+      });
       grid.appendChild(card);
     });
     document.dispatchEvent(new CustomEvent("productsrendered"));
