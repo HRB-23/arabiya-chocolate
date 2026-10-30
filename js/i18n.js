@@ -56,7 +56,7 @@ const I18N = {
     "visit.title": "مكاننا وساعات العمل",
     "contact.addrL": "العنوان", "contact.addr": "[العنوان هنا]",
     "contact.hoursL": "ساعات العمل", "contact.hours": "[الأحد – الخميس، ٠٩:٠٠ – ٢١:٠٠]",
-    "contact.map": "[خريطة جوجل هنا]",
+    "map.waze": "افتح في Waze", "map.google": "اتجاهات Google",
 
     "footer.rights": "جميع الحقوق محفوظة",
 
@@ -116,7 +116,7 @@ const I18N = {
     "visit.title": "איפה אנחנו ושעות הפעילות",
     "contact.addrL": "כתובת", "contact.addr": "[הכתובת כאן]",
     "contact.hoursL": "שעות פעילות", "contact.hours": "[א׳–ה׳, 09:00–21:00]",
-    "contact.map": "[מפת גוגל כאן]",
+    "map.waze": "פתח ב-Waze", "map.google": "ניווט ב-Google",
 
     "footer.rights": "כל הזכויות שמורות",
 

@@ -13,4 +13,8 @@ const CONFIG = {
 
   currency: "₪",
   defaultLang: "ar", // "ar" or "he"
+
+  // Shop location, used for the map embed and the Waze/Google direction links.
+  lat: 32.111375,
+  lng: 34.973969,
 };

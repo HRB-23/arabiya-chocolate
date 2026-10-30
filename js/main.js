@@ -120,6 +120,16 @@
     $$(".js-instagram-link").forEach((a) => { a.href = `https://instagram.com/${CONFIG.instagram}`; });
     $$(".js-instagram-text").forEach((el) => { el.textContent = "@" + CONFIG.instagram; });
 
+    if ($("#map")) {
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://maps.google.com/maps?q=${CONFIG.lat},${CONFIG.lng}&z=17&output=embed`;
+      iframe.loading = "lazy";
+      iframe.title = "map";
+      $("#map").appendChild(iframe);
+    }
+    $$(".js-waze-link").forEach((a) => { a.href = `https://waze.com/ul?ll=${CONFIG.lat},${CONFIG.lng}&navigate=yes`; });
+    $$(".js-google-link").forEach((a) => { a.href = `https://www.google.com/maps/dir/?api=1&destination=${CONFIG.lat},${CONFIG.lng}`; });
+
     $("#langToggle").addEventListener("click", () => {
       lang = lang === "ar" ? "he" : "ar";
       saveLang(lang);
