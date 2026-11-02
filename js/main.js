@@ -22,7 +22,8 @@
   function saveLang(v) { try { localStorage.setItem(LANG_KEY, v); } catch (e) { /* ignore */ } }
 
   const waLink = (msg) => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
-  const formatPrice = (p) => (p == null ? t("product.onRequest") : `${p} ${CONFIG.currency}`);
+  const formatPrice = (p, unit) =>
+    p == null ? t("product.onRequest") : `${p} ${CONFIG.currency}${unit ? "/" + t("product.perKg") : ""}`;
   const productArt = (p) => {
     const i = PRODUCTS.indexOf(p);
     return p.image
@@ -44,6 +45,7 @@
     if ($("#productGrid")) renderProducts($("#productGrid"),
       PRODUCTS.filter((p) => activeCategory === "all" || p.category === activeCategory));
     if ($("#featuredGrid")) renderProducts($("#featuredGrid"), PRODUCTS.filter((p) => p.featured));
+    if ($("#flavoursGrid")) renderFlavours();
     if (page === "contact") renderSelected();
 
     document.dispatchEvent(new CustomEvent("langchange"));
@@ -79,12 +81,12 @@
       const card = document.createElement("article");
       card.className = "card card-link";
       card.innerHTML = `
-        <div class="card-media">${productArt(p)}</div>
+        <div class="card-media">${productArt(p)}${p.brand === "potchini" ? `<span class="badge">${t("badge.potchini")}</span>` : ""}</div>
         <div class="card-body">
           <h3><a href="${href}">${p.name[lang]}</a></h3>
           <p>${p.desc[lang]}</p>
           <div class="card-foot">
-            <span class="price">${formatPrice(p.price)}</span>
+            <span class="price">${formatPrice(p.price, p.unit)}</span>
             <a class="btn btn-small" href="${href}">${t("product.order")}</a>
           </div>
         </div>`;
@@ -98,6 +100,17 @@
     document.dispatchEvent(new CustomEvent("productsrendered"));
   }
 
+  function renderFlavours() {
+    const grid = $("#flavoursGrid");
+    grid.innerHTML = "";
+    FLAVOURS.forEach((f) => {
+      const chip = document.createElement("span");
+      chip.className = "flavour-chip";
+      chip.textContent = f[lang];
+      grid.appendChild(chip);
+    });
+  }
+
   /* ---------- Contact page: product chosen on the products page ---------- */
   function renderSelected() {
     const id = new URLSearchParams(location.search).get("product");
@@ -107,7 +120,7 @@
     box.hidden = false;
     $("#selMedia").innerHTML = productArt(p);
     $("#selName").textContent = p.name[lang];
-    $("#selPrice").textContent = formatPrice(p.price);
+    $("#selPrice").textContent = formatPrice(p.price, p.unit);
     $("#selSend").href = waLink(t("wa.product").replace("{name}", p.name[lang]));
   }
 
