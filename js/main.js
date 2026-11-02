@@ -23,7 +23,7 @@
 
   const waLink = (msg) => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
   const formatPrice = (p, unit) =>
-    p == null ? t("product.onRequest") : `${p} ${CONFIG.currency}${unit ? "/" + t("product.perKg") : ""}`;
+    p == null ? t("product.onRequest") : `${p} ${CONFIG.currency}${unit ? t("product.perKg") : ""}`;
   const productArt = (p) => {
     const i = PRODUCTS.indexOf(p);
     return p.image
@@ -40,6 +40,7 @@
     $$("[data-i18n]").forEach((el) => { el.textContent = t(el.dataset.i18n); });
     $("#langToggle").textContent = t("langSwitch");
     $$(".js-wa-general").forEach((a) => setExternal(a, waLink(t("wa.general"))));
+    $$(".js-flavours-wa").forEach((a) => setExternal(a, waLink(t("wa.flavours"))));
 
     if ($("#filters")) renderFilters();
     if ($("#productGrid")) renderProducts($("#productGrid"),
