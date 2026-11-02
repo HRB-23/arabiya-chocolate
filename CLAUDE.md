@@ -1,4 +1,4 @@
-# العربية للشكولاطة — website
+# العربية للشوكلاطه — website
 
 Static site for a chocolate brand. Plain HTML/CSS/JS, **no build step** — open `index.html`
 directly or serve the folder with any static file server.

@@ -1,4 +1,4 @@
-# العربية للشكولاطة — website
+# العربية للشوكلاطه — website
 
 Static site (HTML/CSS/JS, no build step). Arabic default, Hebrew toggle, orders via WhatsApp.
 
