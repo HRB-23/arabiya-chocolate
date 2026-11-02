@@ -4,12 +4,12 @@
 const CONFIG = {
   // WhatsApp number in international format, digits only (no +, no spaces).
   // Example for Israel: 0521234567  ->  972521234567
-  whatsapp: "972500000000",
+  whatsapp: "972542172156",
 
   // Shown on the page (any format you like)
-  phoneDisplay: "+972 50-000-0000",
+  phoneDisplay: "+972 54-217-2156",
 
-  instagram: "arabiya.chocolate", // handle without @
+  instagram: "alarabi.roastery_kq", // handle without @
 
   currency: "₪",
   defaultLang: "ar", // "ar" or "he"
