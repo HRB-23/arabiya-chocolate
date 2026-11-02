@@ -4,7 +4,7 @@
    ============================================================ */
 :root {
   --cocoa-900: #1f120d;
-  --cocoa-800: #2b1a14;
+  --cocoa-800: #582208;
   --cocoa-600: #5a3a2c;
   --cocoa-400: #8a6250;
   --cream-50:  #fbf7f2;
@@ -12,6 +12,7 @@
   --cream-200: #eadbc9;
   --gold:      #c8a165;
   --gold-dark: #a8823f;
+  --logo-yellow: #FCDE96;
 
   --text: var(--cocoa-800);
   --muted: var(--cocoa-400);
@@ -85,15 +86,16 @@ p { margin: 0 0 1em; }
 
 .logo { display: flex; align-items: center; gap: .7rem; }
 .logo-mark {
-  width: 40px; height: 40px; border-radius: 10px; flex: none;
-  background:
-    linear-gradient(135deg, transparent 46%, var(--gold) 47% 53%, transparent 54%),
-    linear-gradient(45deg, transparent 46%, rgba(200,161,101,.5) 47% 53%, transparent 54%),
-    var(--cocoa-800);
+  height: 44px; width: auto; flex: none; display: block;
+  padding: 4px; border-radius: 10px; background: var(--logo-yellow);
+  box-sizing: content-box;
 }
 .logo-text { display: flex; flex-direction: column; line-height: 1.2; }
 .logo-name { font-family: "Amiri", serif; font-weight: 700; font-size: 1.35rem; }
 .logo-tag { font-size: .75rem; color: var(--muted); }
+
+.footer-logo { width: 120px; height: auto; display: block; }
+.story-logo { width: 90px; height: auto; margin-bottom: 1rem; }
 
 .nav { display: flex; gap: 1.6rem; margin-inline-start: auto; }
 .nav a { font-weight: 500; position: relative; }
@@ -238,7 +240,6 @@ p { margin: 0 0 1em; }
 /* Footer */
 .site-footer { background: var(--cocoa-900); color: var(--cream-200); padding-block: 1.6rem; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .8rem; }
-.site-footer .logo-name { color: var(--gold); }
 
 /* Floating WhatsApp */
 .wa-float {
