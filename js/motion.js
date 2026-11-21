@@ -36,7 +36,7 @@
       io.observe(el);
     });
   }
-  [".section-head", ".story-media", ".story-copy > *", ".timeline li", ".g-item", ".value",
+  [".section-head", ".value",
    ".filters", ".steps li", ".channel", ".selected", ".visit > *", ".cta-inner > *",
    ".center", ".page-hero .container > *"].forEach(reveal);
   const revealCards = () => reveal(".grid .card");
@@ -101,7 +101,7 @@
   if (finePointer) {
     document.addEventListener("pointerover", (e) => {
       ring.classList.add("is-visible");
-      ring.classList.toggle("is-hover", !!e.target.closest("a, button, .card, .g-item"));
+      ring.classList.toggle("is-hover", !!e.target.closest("a, button, .card"));
     });
     document.documentElement.addEventListener("pointerleave", () => ring.classList.remove("is-visible"));
     document.addEventListener("pointerdown", () => ring.classList.add("is-down"));
@@ -171,15 +171,15 @@
   });
 
   if (finePointer) {
-    /* ---------- 3D tilt + light reflection on cards, gallery photos, channels ---------- */
-    const TILT = ".card, .g-item, .channel, .value";
+    /* ---------- 3D tilt + light reflection on cards, channels ---------- */
+    const TILT = ".card, .channel, .value";
     document.addEventListener("pointermove", (e) => {
       const el = e.target.closest && e.target.closest(TILT);
       if (!el) return;
       const r = el.getBoundingClientRect();
       const x = (e.clientX - r.left) / r.width;
       const y = (e.clientY - r.top) / r.height;
-      const strength = el.classList.contains("g-item") ? 6 : 12;
+      const strength = 12;
       el.classList.add("is-tilting");
       el.style.setProperty("--rx", `${((0.5 - y) * strength).toFixed(2)}deg`);
       el.style.setProperty("--ry", `${((x - 0.5) * strength * 1.2).toFixed(2)}deg`);

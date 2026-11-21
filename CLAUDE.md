@@ -5,7 +5,7 @@ directly or serve the folder with any static file server.
 
 ## Pages
 
-- `index.html` — home: hero, story/timeline, photo gallery, values, featured products teaser
+- `index.html` — home: hero, values, featured products teaser
 - `products.html` — full product grid with category filters; each "order" link goes to
   `contact.html?product=<id>`
 - `contact.html` — contact channels (WhatsApp/phone/Instagram), map placeholder, and — when
@@ -42,8 +42,7 @@ same order (`config.js` → `i18n.js` → `products.js` → `main.js` → `motio
   to disable or simplify without touching layout or content logic.
 - `css/styles.css` — all styling; brand colors and fonts are defined as custom properties in
   `:root` at the top of the file.
-- `assets/` — static assets (currently just `favicon.svg`); product/story photos go in
-  `assets/products/` and `assets/photos/` per the README checklist (not yet added).
+- `assets/` — static assets (logo in `assets/logo/`, product photos in `assets/products/`).
 
 ## Conventions
 
