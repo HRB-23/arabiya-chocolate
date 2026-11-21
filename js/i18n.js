@@ -44,7 +44,7 @@ const I18N = {
     "ch.wa": "واتساب", "ch.waD": "أسرع طريقة للطلب والاستفسار",
     "ch.phone": "اتصل بنا", "ch.ig": "إنستغرام", "ch.visit": "زورونا",
     "visit.title": "مكاننا وساعات العمل",
-    "contact.addrL": "العنوان", "contact.addr": "[العنوان هنا]",
+    "contact.addrL": "العنوان", "contact.addr": "المحمص العربي | شارع عمر بن الخطاب، كفر قاسم",
     "contact.hoursL": "ساعات العمل", "contact.hours": "[الأحد – الخميس، ٠٩:٠٠ – ٢١:٠٠]",
     "map.waze": "افتح في Waze", "map.google": "اتجاهات Google",
 
@@ -95,7 +95,7 @@ const I18N = {
     "ch.wa": "וואטסאפ", "ch.waD": "הדרך המהירה להזמין ולשאול",
     "ch.phone": "התקשרו אלינו", "ch.ig": "אינסטגרם", "ch.visit": "בקרו אותנו",
     "visit.title": "איפה אנחנו ושעות הפעילות",
-    "contact.addrL": "כתובת", "contact.addr": "[הכתובת כאן]",
+    "contact.addrL": "כתובת", "contact.addr": "הקלייה הערבית | רחוב עומר בן אל-ח'טאב, כפר קאסם",
     "contact.hoursL": "שעות פעילות", "contact.hours": "[א׳–ה׳, 09:00–21:00]",
     "map.waze": "פתח ב-Waze", "map.google": "ניווט ב-Google",
 
